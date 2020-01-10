@@ -1,0 +1,8 @@
+zpj_authorization_domain_get_type
+zpj_authorizer_get_type
+zpj_goa_authorizer_get_type
+zpj_skydrive_entry_get_type
+zpj_skydrive_file_get_type
+zpj_skydrive_folder_get_type
+zpj_skydrive_get_type
+zpj_skydrive_photo_get_type

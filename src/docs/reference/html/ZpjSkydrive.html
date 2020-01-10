@@ -1,0 +1,1197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>ZpjSkydrive</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.77.1">
+<link rel="home" href="index.html" title="Zapojit Reference Manual">
+<link rel="up" href="skydrive.html" title="Skydrive API">
+<link rel="prev" href="skydrive.html" title="Skydrive API">
+<link rel="next" href="ZpjSkydriveEntry.html" title="ZpjSkydriveEntry">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="skydrive.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="skydrive.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Zapojit Reference Manual</th>
+<td><a accesskey="n" href="ZpjSkydriveEntry.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#ZpjSkydrive.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#ZpjSkydrive.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#ZpjSkydrive.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#ZpjSkydrive.properties" class="shortcut">Properties</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="ZpjSkydrive"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="ZpjSkydrive.top_of_page"></a>ZpjSkydrive</span></h2>
+<p>ZpjSkydrive — Skydrive service object.</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="ZpjSkydrive.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">
+#include &lt;zpj/zpj.h&gt;
+
+struct              <a class="link" href="ZpjSkydrive.html#ZpjSkydrive-struct" title="struct ZpjSkydrive">ZpjSkydrive</a>;
+struct              <a class="link" href="ZpjSkydrive.html#ZpjSkydriveClass" title="struct ZpjSkydriveClass">ZpjSkydriveClass</a>;
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="ZpjSkydrive.html#zpj-skydrive-create-folder" title="zpj_skydrive_create_folder ()">zpj_skydrive_create_folder</a>          (<em class="parameter"><code><a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="ZpjSkydriveFolder.html" title="ZpjSkydriveFolder"><span class="type">ZpjSkydriveFolder</span></a> *folder</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="ZpjSkydrive.html#zpj-skydrive-create-folder-from-name" title="zpj_skydrive_create_folder_from_name ()">zpj_skydrive_create_folder_from_name</a>
+                                                        (<em class="parameter"><code><a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *parent_id</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="ZpjSkydrive.html#zpj-skydrive-delete-entry-id" title="zpj_skydrive_delete_entry_id ()">zpj_skydrive_delete_entry_id</a>        (<em class="parameter"><code><a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *entry_id</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="ZpjSkydrive.html#zpj-skydrive-download-file-id-to-path" title="zpj_skydrive_download_file_id_to_path ()">zpj_skydrive_download_file_id_to_path</a>
+                                                        (<em class="parameter"><code><a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *file_id</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *path</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a href="http://library.gnome.org/devel/gio/unstable/GInputStream.html"><span class="returnvalue">GInputStream</span></a> *      <a class="link" href="ZpjSkydrive.html#zpj-skydrive-download-file-id-to-stream" title="zpj_skydrive_download_file_id_to_stream ()">zpj_skydrive_download_file_id_to_stream</a>
+                                                        (<em class="parameter"><code><a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *file_id</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="ZpjSkydrive.html#zpj-skydrive-download-file-id-to-stream-async" title="zpj_skydrive_download_file_id_to_stream_async ()">zpj_skydrive_download_file_id_to_stream_async</a>
+                                                        (<em class="parameter"><code><a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *file_id</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> callback</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);
+<a href="http://library.gnome.org/devel/gio/unstable/GInputStream.html"><span class="returnvalue">GInputStream</span></a> *      <a class="link" href="ZpjSkydrive.html#zpj-skydrive-download-file-id-to-stream-finish" title="zpj_skydrive_download_file_id_to_stream_finish ()">zpj_skydrive_download_file_id_to_stream_finish</a>
+                                                        (<em class="parameter"><code><a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GAsyncResult.html"><span class="type">GAsyncResult</span></a> *res</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="ZpjSkydrive.html#zpj-skydrive-download-file-to-path" title="zpj_skydrive_download_file_to_path ()">zpj_skydrive_download_file_to_path</a>  (<em class="parameter"><code><a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="ZpjSkydriveFile.html" title="ZpjSkydriveFile"><span class="type">ZpjSkydriveFile</span></a> *file</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *path</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a href="http://library.gnome.org/devel/gio/unstable/GInputStream.html"><span class="returnvalue">GInputStream</span></a> *      <a class="link" href="ZpjSkydrive.html#zpj-skydrive-download-file-to-stream" title="zpj_skydrive_download_file_to_stream ()">zpj_skydrive_download_file_to_stream</a>
+                                                        (<em class="parameter"><code><a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="ZpjSkydriveFile.html" title="ZpjSkydriveFile"><span class="type">ZpjSkydriveFile</span></a> *file</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="ZpjSkydrive.html#zpj-skydrive-download-file-to-stream-async" title="zpj_skydrive_download_file_to_stream_async ()">zpj_skydrive_download_file_to_stream_async</a>
+                                                        (<em class="parameter"><code><a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="ZpjSkydriveFile.html" title="ZpjSkydriveFile"><span class="type">ZpjSkydriveFile</span></a> *file</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> callback</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);
+<a href="http://library.gnome.org/devel/gio/unstable/GInputStream.html"><span class="returnvalue">GInputStream</span></a> *      <a class="link" href="ZpjSkydrive.html#zpj-skydrive-download-file-to-stream-finish" title="zpj_skydrive_download_file_to_stream_finish ()">zpj_skydrive_download_file_to_stream_finish</a>
+                                                        (<em class="parameter"><code><a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GAsyncResult.html"><span class="type">GAsyncResult</span></a> *res</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<span class="returnvalue">ZpjAuthorizer</span> *     <a class="link" href="ZpjSkydrive.html#zpj-skydrive-get-authorizer" title="zpj_skydrive_get_authorizer ()">zpj_skydrive_get_authorizer</a>         (<em class="parameter"><code><a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a> *self</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *             <a class="link" href="ZpjSkydrive.html#zpj-skydrive-list-folder" title="zpj_skydrive_list_folder ()">zpj_skydrive_list_folder</a>            (<em class="parameter"><code><a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="ZpjSkydriveFolder.html" title="ZpjSkydriveFolder"><span class="type">ZpjSkydriveFolder</span></a> *folder</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *             <a class="link" href="ZpjSkydrive.html#zpj-skydrive-list-folder-id" title="zpj_skydrive_list_folder_id ()">zpj_skydrive_list_folder_id</a>         (<em class="parameter"><code><a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *folder_id</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="ZpjSkydrive.html#zpj-skydrive-list-folder-id-async" title="zpj_skydrive_list_folder_id_async ()">zpj_skydrive_list_folder_id_async</a>   (<em class="parameter"><code><a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *folder_id</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> callback</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *             <a class="link" href="ZpjSkydrive.html#zpj-skydrive-list-folder-id-finish" title="zpj_skydrive_list_folder_id_finish ()">zpj_skydrive_list_folder_id_finish</a>  (<em class="parameter"><code><a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GAsyncResult.html"><span class="type">GAsyncResult</span></a> *res</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="returnvalue">ZpjSkydrive</span></a> *       <a class="link" href="ZpjSkydrive.html#zpj-skydrive-new" title="zpj_skydrive_new ()">zpj_skydrive_new</a>                    (<em class="parameter"><code><span class="type">ZpjAuthorizer</span> *authorizer</code></em>);
+<a class="link" href="ZpjSkydriveEntry.html" title="ZpjSkydriveEntry"><span class="returnvalue">ZpjSkydriveEntry</span></a> *  <a class="link" href="ZpjSkydrive.html#zpj-skydrive-query-info-from-id" title="zpj_skydrive_query_info_from_id ()">zpj_skydrive_query_info_from_id</a>     (<em class="parameter"><code><a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *id</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="ZpjSkydrive.html#zpj-skydrive-query-info-from-id-async" title="zpj_skydrive_query_info_from_id_async ()">zpj_skydrive_query_info_from_id_async</a>
+                                                        (<em class="parameter"><code><a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *id</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> callback</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);
+<a class="link" href="ZpjSkydriveEntry.html" title="ZpjSkydriveEntry"><span class="returnvalue">ZpjSkydriveEntry</span></a> *  <a class="link" href="ZpjSkydrive.html#zpj-skydrive-query-info-from-id-finish" title="zpj_skydrive_query_info_from_id_finish ()">zpj_skydrive_query_info_from_id_finish</a>
+                                                        (<em class="parameter"><code><a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GAsyncResult.html"><span class="type">GAsyncResult</span></a> *res</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="ZpjSkydrive.html#zpj-skydrive-set-authorizer" title="zpj_skydrive_set_authorizer ()">zpj_skydrive_set_authorizer</a>         (<em class="parameter"><code><a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><span class="type">ZpjAuthorizer</span> *authorizer</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="ZpjSkydrive.html#zpj-skydrive-upload-path-to-folder" title="zpj_skydrive_upload_path_to_folder ()">zpj_skydrive_upload_path_to_folder</a>  (<em class="parameter"><code><a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *path</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="ZpjSkydriveFolder.html" title="ZpjSkydriveFolder"><span class="type">ZpjSkydriveFolder</span></a> *folder</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="ZpjSkydrive.html#zpj-skydrive-upload-path-to-folder-id" title="zpj_skydrive_upload_path_to_folder_id ()">zpj_skydrive_upload_path_to_folder_id</a>
+                                                        (<em class="parameter"><code><a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *path</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *folder_id</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="ZpjSkydrive.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----ZpjSkydrive
+</pre>
+</div>
+<div class="refsect1">
+<a name="ZpjSkydrive.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="ZpjSkydrive.html#ZpjSkydrive--authorizer" title='The "authorizer" property'>authorizer</a>"               <span class="type">ZpjAuthorizer</span>*        : Read / Write / Construct
+</pre>
+</div>
+<div class="refsect1">
+<a name="ZpjSkydrive.description"></a><h2>Description</h2>
+<p>
+<a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a> represents the
+<a class="ulink" href="http://msdn.microsoft.com/en-us/library/live/hh826521" target="_top">
+Skydrive</a> file hosting service. It has to be used with an
+implementation of <span class="type">ZpjAuthorizer</span>.
+</p>
+<p>
+Currently it supports the following operations:
+</p>
+<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem"><p>Deleting a file, folder or photo.</p></li>
+<li class="listitem"><p>Listing the contents of a folder.</p></li>
+<li class="listitem"><p>Reading the properties of a file, folder or photo.</p></li>
+<li class="listitem"><p>Uploading files and photos.</p></li>
+</ul></div>
+<p>
+</p>
+</div>
+<div class="refsect1">
+<a name="ZpjSkydrive.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="ZpjSkydrive-struct"></a><h3>struct ZpjSkydrive</h3>
+<pre class="programlisting">struct ZpjSkydrive;</pre>
+<p>
+The <a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a> structure contains only private data and should
+only be accessed using the provided API.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ZpjSkydriveClass"></a><h3>struct ZpjSkydriveClass</h3>
+<pre class="programlisting">struct ZpjSkydriveClass {
+  GObjectClass parent_class;
+};
+</pre>
+<p>
+Class structure for <a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObjectClass"><span class="type">GObjectClass</span></a> <em class="structfield"><code><a name="ZpjSkydriveClass.parent-class"></a>parent_class</code></em>;</span></p></td>
+<td>The parent class.</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zpj-skydrive-create-folder"></a><h3>zpj_skydrive_create_folder ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            zpj_skydrive_create_folder          (<em class="parameter"><code><a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="ZpjSkydriveFolder.html" title="ZpjSkydriveFolder"><span class="type">ZpjSkydriveFolder</span></a> *folder</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zpj-skydrive-create-folder-from-name"></a><h3>zpj_skydrive_create_folder_from_name ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            zpj_skydrive_create_folder_from_name
+                                                        (<em class="parameter"><code><a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *parent_id</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zpj-skydrive-delete-entry-id"></a><h3>zpj_skydrive_delete_entry_id ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            zpj_skydrive_delete_entry_id        (<em class="parameter"><code><a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *entry_id</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>
+Synchronously deletes the entry corresponding to <em class="parameter"><code>entry_id</code></em> from
+<a class="ulink" href="http://msdn.microsoft.com/en-us/library/live/hh826521" target="_top">
+Skydrive</a>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>entry_id</code></em> :</span></p></td>
+<td>The ID of the <a class="link" href="ZpjSkydriveEntry.html" title="ZpjSkydriveEntry"><span class="type">ZpjSkydriveEntry</span></a> to be deleted.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>cancellable</code></em> :</span></p></td>
+<td>An optional <a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> object, or
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>An optional <a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><code class="literal">GError</code></a> or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the <a class="link" href="ZpjSkydriveEntry.html" title="ZpjSkydriveEntry"><span class="type">ZpjSkydriveEntry</span></a> was deleted successfully.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zpj-skydrive-download-file-id-to-path"></a><h3>zpj_skydrive_download_file_id_to_path ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            zpj_skydrive_download_file_id_to_path
+                                                        (<em class="parameter"><code><a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *file_id</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *path</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>
+Synchronously downloads the file corresponding to <em class="parameter"><code>file_id</code></em> from
+<a class="ulink" href="http://msdn.microsoft.com/en-us/library/live/hh826521" target="_top">
+Skydrive</a> and saves it in <em class="parameter"><code>path</code></em>. The file is temporarily
+saved in the preferred directory for temporary files (as returned
+by <a href="http://library.gnome.org/devel/glib/unstable/glib-Miscellaneous-Utility-Functions.html#g-get-tmp-dir"><code class="function">g_get_tmp_dir()</code></a>) while the download is going on, and then moved
+to <em class="parameter"><code>path</code></em>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>file_id</code></em> :</span></p></td>
+<td>The ID of the <a class="link" href="ZpjSkydriveFile.html" title="ZpjSkydriveFile"><span class="type">ZpjSkydriveFile</span></a> to be downloaded.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>path</code></em> :</span></p></td>
+<td>The destination.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>cancellable</code></em> :</span></p></td>
+<td>An optional <a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> object, or
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>An optional <a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><code class="literal">GError</code></a> or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the <a class="link" href="ZpjSkydriveFile.html" title="ZpjSkydriveFile"><span class="type">ZpjSkydriveFile</span></a> was downloaded successfully.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zpj-skydrive-download-file-id-to-stream"></a><h3>zpj_skydrive_download_file_id_to_stream ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/gio/unstable/GInputStream.html"><span class="returnvalue">GInputStream</span></a> *      zpj_skydrive_download_file_id_to_stream
+                                                        (<em class="parameter"><code><a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *file_id</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>
+Synchronously returns a stream for downloading the file
+corresponding to <em class="parameter"><code>file_id</code></em> from
+<a class="ulink" href="http://msdn.microsoft.com/en-us/library/live/hh826521" target="_top">
+Skydrive</a>. See
+<a class="link" href="ZpjSkydrive.html#zpj-skydrive-download-file-id-to-stream-async" title="zpj_skydrive_download_file_id_to_stream_async ()"><code class="function">zpj_skydrive_download_file_id_to_stream_async()</code></a> for the asynchronous
+version of this call.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>file_id</code></em> :</span></p></td>
+<td>The ID of the <a class="link" href="ZpjSkydriveFile.html" title="ZpjSkydriveFile"><span class="type">ZpjSkydriveFile</span></a> to be downloaded.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>cancellable</code></em> :</span></p></td>
+<td>An optional <a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> object, or
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>An optional <a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><code class="literal">GError</code></a> or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://library.gnome.org/devel/gio/unstable/GInputStream.html"><span class="type">GInputStream</span></a> to read the file data
+from. Free the returned object with <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>. <span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zpj-skydrive-download-file-id-to-stream-async"></a><h3>zpj_skydrive_download_file_id_to_stream_async ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                zpj_skydrive_download_file_id_to_stream_async
+                                                        (<em class="parameter"><code><a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *file_id</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> callback</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+<p>
+Asynchronously returns a stream for downloading the file
+corresponding to <em class="parameter"><code>file_id</code></em> from
+<a class="ulink" href="http://msdn.microsoft.com/en-us/library/live/hh826521" target="_top">
+Skydrive</a>. See <a class="link" href="ZpjSkydrive.html#zpj-skydrive-download-file-id-to-stream" title="zpj_skydrive_download_file_id_to_stream ()"><code class="function">zpj_skydrive_download_file_id_to_stream()</code></a> for
+the synchronous version of this call.
+</p>
+<p>
+When the operation is finished, <em class="parameter"><code>callback</code></em> will be called. You can
+then call <a class="link" href="ZpjSkydrive.html#zpj-skydrive-download-file-id-to-stream-finish" title="zpj_skydrive_download_file_id_to_stream_finish ()"><code class="function">zpj_skydrive_download_file_id_to_stream_finish()</code></a> to get
+the result of the operation.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>file_id</code></em> :</span></p></td>
+<td>The ID of the <a class="link" href="ZpjSkydriveFile.html" title="ZpjSkydriveFile"><span class="type">ZpjSkydriveFile</span></a> to be downloaded.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>cancellable</code></em> :</span></p></td>
+<td>An optional <a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> object, or
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>callback</code></em> :</span></p></td>
+<td>A <a href="http://library.gnome.org/devel/gio/unstable/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> to call when the
+request is satisfied. <span class="annotation">[<acronym title="The callback is valid until first called."><span class="acronym">scope async</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>The data to pass to <em class="parameter"><code>callback</code></em>. <span class="annotation">[<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zpj-skydrive-download-file-id-to-stream-finish"></a><h3>zpj_skydrive_download_file_id_to_stream_finish ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/gio/unstable/GInputStream.html"><span class="returnvalue">GInputStream</span></a> *      zpj_skydrive_download_file_id_to_stream_finish
+                                                        (<em class="parameter"><code><a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GAsyncResult.html"><span class="type">GAsyncResult</span></a> *res</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>
+Finishes an asynchronous operation started with
+<a class="link" href="ZpjSkydrive.html#zpj-skydrive-download-file-id-to-stream-async" title="zpj_skydrive_download_file_id_to_stream_async ()"><code class="function">zpj_skydrive_download_file_id_to_stream_async()</code></a>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>res</code></em> :</span></p></td>
+<td>A <a href="http://library.gnome.org/devel/gio/unstable/GAsyncResult.html"><span class="type">GAsyncResult</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>An optional <a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://library.gnome.org/devel/gio/unstable/GInputStream.html"><span class="type">GInputStream</span></a> to read the file data
+from. Free the returned object with <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>. <span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zpj-skydrive-download-file-to-path"></a><h3>zpj_skydrive_download_file_to_path ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            zpj_skydrive_download_file_to_path  (<em class="parameter"><code><a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="ZpjSkydriveFile.html" title="ZpjSkydriveFile"><span class="type">ZpjSkydriveFile</span></a> *file</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *path</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>
+Synchronously downloads <em class="parameter"><code>file</code></em> from
+<a class="ulink" href="http://msdn.microsoft.com/en-us/library/live/hh826521" target="_top">
+Skydrive</a> and saves it in <em class="parameter"><code>path</code></em>. The file is temporarily
+saved in the preferred directory for temporary files (as returned
+by <a href="http://library.gnome.org/devel/glib/unstable/glib-Miscellaneous-Utility-Functions.html#g-get-tmp-dir"><code class="function">g_get_tmp_dir()</code></a>) while the download is going on, and then moved
+to <em class="parameter"><code>path</code></em>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>file</code></em> :</span></p></td>
+<td>The <a class="link" href="ZpjSkydriveFile.html" title="ZpjSkydriveFile"><span class="type">ZpjSkydriveFile</span></a> to be downloaded.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>path</code></em> :</span></p></td>
+<td>The destination.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>cancellable</code></em> :</span></p></td>
+<td>An optional <a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> object, or
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>An optional <a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><code class="literal">GError</code></a> or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the <a class="link" href="ZpjSkydriveFile.html" title="ZpjSkydriveFile"><span class="type">ZpjSkydriveFile</span></a> was downloaded successfully.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zpj-skydrive-download-file-to-stream"></a><h3>zpj_skydrive_download_file_to_stream ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/gio/unstable/GInputStream.html"><span class="returnvalue">GInputStream</span></a> *      zpj_skydrive_download_file_to_stream
+                                                        (<em class="parameter"><code><a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="ZpjSkydriveFile.html" title="ZpjSkydriveFile"><span class="type">ZpjSkydriveFile</span></a> *file</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>
+Synchronously returns a stream for downloading <em class="parameter"><code>file</code></em> from
+<a class="ulink" href="http://msdn.microsoft.com/en-us/library/live/hh826521" target="_top">
+Skydrive</a>. See <a class="link" href="ZpjSkydrive.html#zpj-skydrive-download-file-to-stream-async" title="zpj_skydrive_download_file_to_stream_async ()"><code class="function">zpj_skydrive_download_file_to_stream_async()</code></a>
+for the asynchronous version of this call.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>file</code></em> :</span></p></td>
+<td>The <a class="link" href="ZpjSkydriveFile.html" title="ZpjSkydriveFile"><span class="type">ZpjSkydriveFile</span></a> to be downloaded.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>cancellable</code></em> :</span></p></td>
+<td>An optional <a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> object, or
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>An optional <a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><code class="literal">GError</code></a> or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://library.gnome.org/devel/gio/unstable/GInputStream.html"><span class="type">GInputStream</span></a> to read the file data
+from. Free the returned object with <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>. <span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zpj-skydrive-download-file-to-stream-async"></a><h3>zpj_skydrive_download_file_to_stream_async ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                zpj_skydrive_download_file_to_stream_async
+                                                        (<em class="parameter"><code><a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="ZpjSkydriveFile.html" title="ZpjSkydriveFile"><span class="type">ZpjSkydriveFile</span></a> *file</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> callback</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+<p>
+Asynchronously returns a stream for downloading <em class="parameter"><code>file</code></em> from
+<a class="ulink" href="http://msdn.microsoft.com/en-us/library/live/hh826521" target="_top">
+Skydrive</a>. See <a class="link" href="ZpjSkydrive.html#zpj-skydrive-download-file-to-stream" title="zpj_skydrive_download_file_to_stream ()"><code class="function">zpj_skydrive_download_file_to_stream()</code></a> for the
+synchronous version of this call.
+</p>
+<p>
+When the operation is finished, <em class="parameter"><code>callback</code></em> will be called. You can
+then call <a class="link" href="ZpjSkydrive.html#zpj-skydrive-download-file-to-stream-finish" title="zpj_skydrive_download_file_to_stream_finish ()"><code class="function">zpj_skydrive_download_file_to_stream_finish()</code></a> to get the
+result of the operation.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>file</code></em> :</span></p></td>
+<td>The <a class="link" href="ZpjSkydriveFile.html" title="ZpjSkydriveFile"><span class="type">ZpjSkydriveFile</span></a> to be downloaded.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>cancellable</code></em> :</span></p></td>
+<td>An optional <a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> object, or
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>callback</code></em> :</span></p></td>
+<td>A <a href="http://library.gnome.org/devel/gio/unstable/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> to call when the
+request is satisfied. <span class="annotation">[<acronym title="The callback is valid until first called."><span class="acronym">scope async</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>The data to pass to <em class="parameter"><code>callback</code></em>. <span class="annotation">[<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zpj-skydrive-download-file-to-stream-finish"></a><h3>zpj_skydrive_download_file_to_stream_finish ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/gio/unstable/GInputStream.html"><span class="returnvalue">GInputStream</span></a> *      zpj_skydrive_download_file_to_stream_finish
+                                                        (<em class="parameter"><code><a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GAsyncResult.html"><span class="type">GAsyncResult</span></a> *res</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>
+Finishes an asynchronous operation started with
+<a class="link" href="ZpjSkydrive.html#zpj-skydrive-download-file-to-stream-async" title="zpj_skydrive_download_file_to_stream_async ()"><code class="function">zpj_skydrive_download_file_to_stream_async()</code></a>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>res</code></em> :</span></p></td>
+<td>A <a href="http://library.gnome.org/devel/gio/unstable/GAsyncResult.html"><span class="type">GAsyncResult</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>An optional <a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="http://library.gnome.org/devel/gio/unstable/GInputStream.html"><span class="type">GInputStream</span></a> to read the file data
+from. Free the returned object with <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>. <span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zpj-skydrive-get-authorizer"></a><h3>zpj_skydrive_get_authorizer ()</h3>
+<pre class="programlisting"><span class="returnvalue">ZpjAuthorizer</span> *     zpj_skydrive_get_authorizer         (<em class="parameter"><code><a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a> *self</code></em>);</pre>
+<p>
+Gets the authorizer used to authorize requests to <em class="parameter"><code>self</code></em>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <span class="type">ZpjAuthorizer</span>. The returned object is
+owned by <a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a> and should not be modified or freed. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zpj-skydrive-list-folder"></a><h3>zpj_skydrive_list_folder ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *             zpj_skydrive_list_folder            (<em class="parameter"><code><a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="ZpjSkydriveFolder.html" title="ZpjSkydriveFolder"><span class="type">ZpjSkydriveFolder</span></a> *folder</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>
+Synchronously lists the contents of <em class="parameter"><code>folder_id</code></em> from
+<a class="ulink" href="http://msdn.microsoft.com/en-us/library/live/hh826521" target="_top">
+Skydrive</a>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>folder</code></em> :</span></p></td>
+<td>The <a class="link" href="ZpjSkydriveFolder.html" title="ZpjSkydriveFolder"><span class="type">ZpjSkydriveFolder</span></a> to be listed.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>cancellable</code></em> :</span></p></td>
+<td>An optional <a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> object, or
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>An optional <a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><code class="literal">GError</code></a> or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A
+list of the <a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a> entries within the <a class="link" href="ZpjSkydriveFolder.html" title="ZpjSkydriveFolder"><span class="type">ZpjSkydriveFolder</span></a>.
+Free the returned list with <a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#g-list-free"><code class="function">g_list_free()</code></a> after each element has
+been freed with <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>. <span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> ZpjSkydriveEntry]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zpj-skydrive-list-folder-id"></a><h3>zpj_skydrive_list_folder_id ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *             zpj_skydrive_list_folder_id         (<em class="parameter"><code><a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *folder_id</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>
+Synchronously lists the contents of the folder corresponding to
+<em class="parameter"><code>folder_id</code></em> from
+<a class="ulink" href="http://msdn.microsoft.com/en-us/library/live/hh826521" target="_top">
+Skydrive</a>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>folder_id</code></em> :</span></p></td>
+<td>The ID of the <a class="link" href="ZpjSkydriveFolder.html" title="ZpjSkydriveFolder"><span class="type">ZpjSkydriveFolder</span></a> to be listed.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>cancellable</code></em> :</span></p></td>
+<td>An optional <a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> object, or
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>An optional <a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><code class="literal">GError</code></a> or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A
+list of the <a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a> entries within the <a class="link" href="ZpjSkydriveFolder.html" title="ZpjSkydriveFolder"><span class="type">ZpjSkydriveFolder</span></a>, or
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> on error. Free the returned list with <a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#g-list-free"><code class="function">g_list_free()</code></a> after
+each element has been freed with <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>. <span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> ZpjSkydriveEntry]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zpj-skydrive-list-folder-id-async"></a><h3>zpj_skydrive_list_folder_id_async ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                zpj_skydrive_list_folder_id_async   (<em class="parameter"><code><a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *folder_id</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> callback</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+<p>
+Asynchronously lists the contents of the folder corresponding to
+<em class="parameter"><code>folder_id</code></em> from
+<a class="ulink" href="http://msdn.microsoft.com/en-us/library/live/hh826521" target="_top">
+Skydrive</a>. See <a class="link" href="ZpjSkydrive.html#zpj-skydrive-list-folder-id" title="zpj_skydrive_list_folder_id ()"><code class="function">zpj_skydrive_list_folder_id()</code></a> for the
+synchronous version of this call.
+</p>
+<p>
+When the operation is finished, <em class="parameter"><code>callback</code></em> will be called. You can
+then call <a class="link" href="ZpjSkydrive.html#zpj-skydrive-list-folder-id-finish" title="zpj_skydrive_list_folder_id_finish ()"><code class="function">zpj_skydrive_list_folder_id_finish()</code></a> to get the result
+of the operation.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>folder_id</code></em> :</span></p></td>
+<td>The ID of the <a class="link" href="ZpjSkydriveFolder.html" title="ZpjSkydriveFolder"><span class="type">ZpjSkydriveFolder</span></a> to be listed.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>cancellable</code></em> :</span></p></td>
+<td>An optional <a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> object, or
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>callback</code></em> :</span></p></td>
+<td>A <a href="http://library.gnome.org/devel/gio/unstable/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> to call when the
+request is satisfied. <span class="annotation">[<acronym title="The callback is valid until first called."><span class="acronym">scope async</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>The data to pass to <em class="parameter"><code>callback</code></em>. <span class="annotation">[<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zpj-skydrive-list-folder-id-finish"></a><h3>zpj_skydrive_list_folder_id_finish ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *             zpj_skydrive_list_folder_id_finish  (<em class="parameter"><code><a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GAsyncResult.html"><span class="type">GAsyncResult</span></a> *res</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>
+Finishes an asynchronous operation started with
+<a class="link" href="ZpjSkydrive.html#zpj-skydrive-list-folder-id-async" title="zpj_skydrive_list_folder_id_async ()"><code class="function">zpj_skydrive_list_folder_id_async()</code></a>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>res</code></em> :</span></p></td>
+<td>A <a href="http://library.gnome.org/devel/gio/unstable/GAsyncResult.html"><span class="type">GAsyncResult</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>An optional <a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A
+list of the <a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a> entries within the <a class="link" href="ZpjSkydriveFolder.html" title="ZpjSkydriveFolder"><span class="type">ZpjSkydriveFolder</span></a>, or
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> on error. Free the returned list with <a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#g-list-free"><code class="function">g_list_free()</code></a> after
+each element has been freed with <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>. <span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> ZpjSkydriveEntry]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zpj-skydrive-new"></a><h3>zpj_skydrive_new ()</h3>
+<pre class="programlisting"><a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="returnvalue">ZpjSkydrive</span></a> *       zpj_skydrive_new                    (<em class="parameter"><code><span class="type">ZpjAuthorizer</span> *authorizer</code></em>);</pre>
+<p>
+Creates a new <a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a> using the given <em class="parameter"><code>authorizer</code></em>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>authorizer</code></em> :</span></p></td>
+<td>A <span class="type">ZpjAuthorizer</span> to authorize the service's requests.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A new <a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a>. Free the returned
+object with <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>. <span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zpj-skydrive-query-info-from-id"></a><h3>zpj_skydrive_query_info_from_id ()</h3>
+<pre class="programlisting"><a class="link" href="ZpjSkydriveEntry.html" title="ZpjSkydriveEntry"><span class="returnvalue">ZpjSkydriveEntry</span></a> *  zpj_skydrive_query_info_from_id     (<em class="parameter"><code><a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *id</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>
+Synchronously reads the properties of the entry corresponding to
+<em class="parameter"><code>id</code></em> from
+<a class="ulink" href="http://msdn.microsoft.com/en-us/library/live/hh826521" target="_top">
+Skydrive</a>. See <a class="link" href="ZpjSkydrive.html#zpj-skydrive-query-info-from-id-async" title="zpj_skydrive_query_info_from_id_async ()"><code class="function">zpj_skydrive_query_info_from_id_async()</code></a> for
+the asynchronous version of this call.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>id</code></em> :</span></p></td>
+<td>An ID to be queried.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>cancellable</code></em> :</span></p></td>
+<td>An optional <a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> object, or
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>An optional <a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><code class="literal">GError</code></a> or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A new <a class="link" href="ZpjSkydriveEntry.html" title="ZpjSkydriveEntry"><span class="type">ZpjSkydriveEntry</span></a>. Free the
+returned object with <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>. <span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zpj-skydrive-query-info-from-id-async"></a><h3>zpj_skydrive_query_info_from_id_async ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                zpj_skydrive_query_info_from_id_async
+                                                        (<em class="parameter"><code><a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *id</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> callback</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
+<p>
+Asynchronously reads the properties of the entry corresponding to
+<em class="parameter"><code>id</code></em> from
+<a class="ulink" href="http://msdn.microsoft.com/en-us/library/live/hh826521" target="_top">
+Skydrive</a>. See <a class="link" href="ZpjSkydrive.html#zpj-skydrive-query-info-from-id" title="zpj_skydrive_query_info_from_id ()"><code class="function">zpj_skydrive_query_info_from_id()</code></a> for the
+synchronous version of this call.
+</p>
+<p>
+When the operation is finished, <em class="parameter"><code>callback</code></em> will be called. You can
+then call <a class="link" href="ZpjSkydrive.html#zpj-skydrive-query-info-from-id-finish" title="zpj_skydrive_query_info_from_id_finish ()"><code class="function">zpj_skydrive_query_info_from_id_finish()</code></a> to get the result
+of the operation.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>id</code></em> :</span></p></td>
+<td>The ID to be queried.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>cancellable</code></em> :</span></p></td>
+<td>An optional <a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> object, or
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>callback</code></em> :</span></p></td>
+<td>A <a href="http://library.gnome.org/devel/gio/unstable/GAsyncResult.html#GAsyncReadyCallback"><span class="type">GAsyncReadyCallback</span></a> to call when the
+request is satisfied. <span class="annotation">[<acronym title="The callback is valid until first called."><span class="acronym">scope async</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>user_data</code></em> :</span></p></td>
+<td>The data to pass to <em class="parameter"><code>callback</code></em>. <span class="annotation">[<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zpj-skydrive-query-info-from-id-finish"></a><h3>zpj_skydrive_query_info_from_id_finish ()</h3>
+<pre class="programlisting"><a class="link" href="ZpjSkydriveEntry.html" title="ZpjSkydriveEntry"><span class="returnvalue">ZpjSkydriveEntry</span></a> *  zpj_skydrive_query_info_from_id_finish
+                                                        (<em class="parameter"><code><a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GAsyncResult.html"><span class="type">GAsyncResult</span></a> *res</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>
+Finishes an asynchronous operation started with
+<a class="link" href="ZpjSkydrive.html#zpj-skydrive-query-info-from-id-async" title="zpj_skydrive_query_info_from_id_async ()"><code class="function">zpj_skydrive_query_info_from_id_async()</code></a>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>res</code></em> :</span></p></td>
+<td>A <a href="http://library.gnome.org/devel/gio/unstable/GAsyncResult.html"><span class="type">GAsyncResult</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>An optional <a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A new <a class="link" href="ZpjSkydriveEntry.html" title="ZpjSkydriveEntry"><span class="type">ZpjSkydriveEntry</span></a>. Free the returned
+object with <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>. <span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zpj-skydrive-set-authorizer"></a><h3>zpj_skydrive_set_authorizer ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                zpj_skydrive_set_authorizer         (<em class="parameter"><code><a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><span class="type">ZpjAuthorizer</span> *authorizer</code></em>);</pre>
+<p>
+Uses the new <em class="parameter"><code>authorizer</code></em> to replace the old one that was used to
+authorize requests to <em class="parameter"><code>self</code></em>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>authorizer</code></em> :</span></p></td>
+<td>A new <span class="type">ZpjAuthorizer</span>.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zpj-skydrive-upload-path-to-folder"></a><h3>zpj_skydrive_upload_path_to_folder ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            zpj_skydrive_upload_path_to_folder  (<em class="parameter"><code><a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *path</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="ZpjSkydriveFolder.html" title="ZpjSkydriveFolder"><span class="type">ZpjSkydriveFolder</span></a> *folder</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>
+Synchronously uploads the file at <em class="parameter"><code>path</code></em> to
+<a class="ulink" href="http://msdn.microsoft.com/en-us/library/live/hh826521" target="_top">
+Skydrive</a> and places it under <em class="parameter"><code>folder</code></em>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>path</code></em> :</span></p></td>
+<td>The source.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>folder</code></em> :</span></p></td>
+<td>The destination <a class="link" href="ZpjSkydriveFolder.html" title="ZpjSkydriveFolder"><span class="type">ZpjSkydriveFolder</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>cancellable</code></em> :</span></p></td>
+<td>An optional <a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> object, or
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>An optional <a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><code class="literal">GError</code></a> or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the file was uploaded successfully.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zpj-skydrive-upload-path-to-folder-id"></a><h3>zpj_skydrive_upload_path_to_folder_id ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            zpj_skydrive_upload_path_to_folder_id
+                                                        (<em class="parameter"><code><a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *path</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *folder_id</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>
+Synchronously uploads the file at <em class="parameter"><code>path</code></em> to
+<a class="ulink" href="http://msdn.microsoft.com/en-us/library/live/hh826521" target="_top">
+Skydrive</a> and places it under the folder corresponding to
+<em class="parameter"><code>folder_id</code></em>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="ZpjSkydrive.html" title="ZpjSkydrive"><span class="type">ZpjSkydrive</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>path</code></em> :</span></p></td>
+<td>The source.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>folder_id</code></em> :</span></p></td>
+<td>The ID of the destination <a class="link" href="ZpjSkydriveFolder.html" title="ZpjSkydriveFolder"><span class="type">ZpjSkydriveFolder</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>cancellable</code></em> :</span></p></td>
+<td>An optional <a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> object, or
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>An optional <a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><code class="literal">GError</code></a> or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the file was uploaded successfully.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="ZpjSkydrive.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="ZpjSkydrive--authorizer"></a><h3>The <code class="literal">"authorizer"</code> property</h3>
+<pre class="programlisting">  "authorizer"               <span class="type">ZpjAuthorizer</span>*        : Read / Write / Construct</pre>
+<p>An authorizer object to provide an access token for each request.</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

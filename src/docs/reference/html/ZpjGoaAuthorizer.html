@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>ZpjGoaAuthorizer</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.77.1">
+<link rel="home" href="index.html" title="Zapojit Reference Manual">
+<link rel="up" href="authorization.html" title="Authorization API">
+<link rel="prev" href="libzapojit-0.0-ZpjAuthorizer.html" title="ZpjAuthorizer">
+<link rel="next" href="skydrive.html" title="Skydrive API">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="libzapojit-0.0-ZpjAuthorizer.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="authorization.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Zapojit Reference Manual</th>
+<td><a accesskey="n" href="skydrive.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#ZpjGoaAuthorizer.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#ZpjGoaAuthorizer.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#ZpjGoaAuthorizer.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#ZpjGoaAuthorizer.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+                   | 
+                  <a href="#ZpjGoaAuthorizer.properties" class="shortcut">Properties</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="ZpjGoaAuthorizer"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="ZpjGoaAuthorizer.top_of_page"></a>ZpjGoaAuthorizer</span></h2>
+<p>ZpjGoaAuthorizer — A GNOME Online Accounts authorizer object for
+  Windows Live Connect.</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="ZpjGoaAuthorizer.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">
+#include &lt;zpj/zpj.h&gt;
+
+struct              <a class="link" href="ZpjGoaAuthorizer.html#ZpjGoaAuthorizer-struct" title="struct ZpjGoaAuthorizer">ZpjGoaAuthorizer</a>;
+struct              <a class="link" href="ZpjGoaAuthorizer.html#ZpjGoaAuthorizerClass" title="struct ZpjGoaAuthorizerClass">ZpjGoaAuthorizerClass</a>;
+<a href="/usr/share/gtk-doc/html/goa/GoaObject.html"><span class="returnvalue">GoaObject</span></a> *         <a class="link" href="ZpjGoaAuthorizer.html#zpj-goa-authorizer-get-goa-object" title="zpj_goa_authorizer_get_goa_object ()">zpj_goa_authorizer_get_goa_object</a>   (<em class="parameter"><code><a class="link" href="ZpjGoaAuthorizer.html" title="ZpjGoaAuthorizer"><span class="type">ZpjGoaAuthorizer</span></a> *self</code></em>);
+<a class="link" href="ZpjGoaAuthorizer.html" title="ZpjGoaAuthorizer"><span class="returnvalue">ZpjGoaAuthorizer</span></a> *  <a class="link" href="ZpjGoaAuthorizer.html#zpj-goa-authorizer-new" title="zpj_goa_authorizer_new ()">zpj_goa_authorizer_new</a>              (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/goa/GoaObject.html"><span class="type">GoaObject</span></a> *goa_object</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="ZpjGoaAuthorizer.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----ZpjGoaAuthorizer
+</pre>
+</div>
+<div class="refsect1">
+<a name="ZpjGoaAuthorizer.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+ZpjGoaAuthorizer implements
+ ZpjAuthorizer.</p>
+</div>
+<div class="refsect1">
+<a name="ZpjGoaAuthorizer.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="ZpjGoaAuthorizer.html#ZpjGoaAuthorizer--goa-object" title='The "goa-object" property'>goa-object</a>"               <a href="/usr/share/gtk-doc/html/goa/GoaObject.html"><span class="type">GoaObject</span></a>*            : Read / Write / Construct Only
+</pre>
+</div>
+<div class="refsect1">
+<a name="ZpjGoaAuthorizer.description"></a><h2>Description</h2>
+<p>
+<a class="link" href="ZpjGoaAuthorizer.html" title="ZpjGoaAuthorizer"><span class="type">ZpjGoaAuthorizer</span></a> provides an implementation of the <span class="type">ZpjAuthorizer</span>
+interface using GNOME Online Accounts.
+</p>
+</div>
+<div class="refsect1">
+<a name="ZpjGoaAuthorizer.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="ZpjGoaAuthorizer-struct"></a><h3>struct ZpjGoaAuthorizer</h3>
+<pre class="programlisting">struct ZpjGoaAuthorizer;</pre>
+<p>
+The <a class="link" href="ZpjGoaAuthorizer.html" title="ZpjGoaAuthorizer"><span class="type">ZpjGoaAuthorizer</span></a> structure contains only private data and
+should only be accessed using the provided API.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ZpjGoaAuthorizerClass"></a><h3>struct ZpjGoaAuthorizerClass</h3>
+<pre class="programlisting">struct ZpjGoaAuthorizerClass {
+  GObjectClass parent_class;
+};
+</pre>
+<p>
+Class structure for <a class="link" href="ZpjGoaAuthorizer.html" title="ZpjGoaAuthorizer"><span class="type">ZpjGoaAuthorizer</span></a>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObjectClass"><span class="type">GObjectClass</span></a> <em class="structfield"><code><a name="ZpjGoaAuthorizerClass.parent-class"></a>parent_class</code></em>;</span></p></td>
+<td>The parent class.</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zpj-goa-authorizer-get-goa-object"></a><h3>zpj_goa_authorizer_get_goa_object ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/goa/GoaObject.html"><span class="returnvalue">GoaObject</span></a> *         zpj_goa_authorizer_get_goa_object   (<em class="parameter"><code><a class="link" href="ZpjGoaAuthorizer.html" title="ZpjGoaAuthorizer"><span class="type">ZpjGoaAuthorizer</span></a> *self</code></em>);</pre>
+<p>
+Gets the GOA account used by <em class="parameter"><code>self</code></em> for authorization.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="ZpjGoaAuthorizer.html" title="ZpjGoaAuthorizer"><span class="type">ZpjGoaAuthorizer</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a href="/usr/share/gtk-doc/html/goa/GoaObject.html"><span class="type">GoaObject</span></a>. The returned object is
+owned by <a class="link" href="ZpjGoaAuthorizer.html" title="ZpjGoaAuthorizer"><span class="type">ZpjGoaAuthorizer</span></a> and should not be modified or freed. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zpj-goa-authorizer-new"></a><h3>zpj_goa_authorizer_new ()</h3>
+<pre class="programlisting"><a class="link" href="ZpjGoaAuthorizer.html" title="ZpjGoaAuthorizer"><span class="returnvalue">ZpjGoaAuthorizer</span></a> *  zpj_goa_authorizer_new              (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/goa/GoaObject.html"><span class="type">GoaObject</span></a> *goa_object</code></em>);</pre>
+<p>
+Creates a new <a class="link" href="ZpjGoaAuthorizer.html" title="ZpjGoaAuthorizer"><span class="type">ZpjGoaAuthorizer</span></a> using <em class="parameter"><code>goa_object</code></em>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>goa_object</code></em> :</span></p></td>
+<td>A <a href="/usr/share/gtk-doc/html/goa/GoaObject.html"><span class="type">GoaObject</span></a> representing a Windows Live account.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A new <a class="link" href="ZpjGoaAuthorizer.html" title="ZpjGoaAuthorizer"><span class="type">ZpjGoaAuthorizer</span></a>. Free the returned
+object with <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>. <span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="ZpjGoaAuthorizer.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="ZpjGoaAuthorizer--goa-object"></a><h3>The <code class="literal">"goa-object"</code> property</h3>
+<pre class="programlisting">  "goa-object"               <a href="/usr/share/gtk-doc/html/goa/GoaObject.html"><span class="type">GoaObject</span></a>*            : Read / Write / Construct Only</pre>
+<p>The GOA account to authenticate.</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

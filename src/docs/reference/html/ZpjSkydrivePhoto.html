@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>ZpjSkydrivePhoto</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.77.1">
+<link rel="home" href="index.html" title="Zapojit Reference Manual">
+<link rel="up" href="skydrive.html" title="Skydrive API">
+<link rel="prev" href="ZpjSkydriveFolder.html" title="ZpjSkydriveFolder">
+<link rel="next" href="ix01.html" title="Index">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="ZpjSkydriveFolder.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="skydrive.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Zapojit Reference Manual</th>
+<td><a accesskey="n" href="ix01.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#ZpjSkydrivePhoto.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#ZpjSkydrivePhoto.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#ZpjSkydrivePhoto.object-hierarchy" class="shortcut">Object Hierarchy</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="ZpjSkydrivePhoto"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="ZpjSkydrivePhoto.top_of_page"></a>ZpjSkydrivePhoto</span></h2>
+<p>ZpjSkydrivePhoto — Skydrive photo object.</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="ZpjSkydrivePhoto.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">
+#include &lt;zpj/zpj.h&gt;
+
+struct              <a class="link" href="ZpjSkydrivePhoto.html#ZpjSkydrivePhoto-struct" title="struct ZpjSkydrivePhoto">ZpjSkydrivePhoto</a>;
+struct              <a class="link" href="ZpjSkydrivePhoto.html#ZpjSkydrivePhotoClass" title="struct ZpjSkydrivePhotoClass">ZpjSkydrivePhotoClass</a>;
+<a class="link" href="ZpjSkydriveEntry.html" title="ZpjSkydriveEntry"><span class="returnvalue">ZpjSkydriveEntry</span></a> *  <a class="link" href="ZpjSkydrivePhoto.html#zpj-skydrive-photo-new" title="zpj_skydrive_photo_new ()">zpj_skydrive_photo_new</a>              (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/json-glib/json-glib-JSON-Node.html#JsonNode"><span class="type">JsonNode</span></a> *node</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="ZpjSkydrivePhoto.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a class="link" href="ZpjSkydriveEntry.html" title="ZpjSkydriveEntry">ZpjSkydriveEntry</a>
+         +----<a class="link" href="ZpjSkydriveFile.html" title="ZpjSkydriveFile">ZpjSkydriveFile</a>
+               +----ZpjSkydrivePhoto
+</pre>
+</div>
+<div class="refsect1">
+<a name="ZpjSkydrivePhoto.description"></a><h2>Description</h2>
+<p>
+<a class="link" href="ZpjSkydrivePhoto.html" title="ZpjSkydrivePhoto"><span class="type">ZpjSkydrivePhoto</span></a> represents a <a class="ulink" href="http://msdn.microsoft.com/en-us/library/live/hh243648#photo" target="_top">
+Skydrive photo</a> object.
+</p>
+</div>
+<div class="refsect1">
+<a name="ZpjSkydrivePhoto.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="ZpjSkydrivePhoto-struct"></a><h3>struct ZpjSkydrivePhoto</h3>
+<pre class="programlisting">struct ZpjSkydrivePhoto;</pre>
+<p>
+The <a class="link" href="ZpjSkydrivePhoto.html" title="ZpjSkydrivePhoto"><span class="type">ZpjSkydrivePhoto</span></a> structure contains only private data and
+should only be accessed using the provided API.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ZpjSkydrivePhotoClass"></a><h3>struct ZpjSkydrivePhotoClass</h3>
+<pre class="programlisting">struct ZpjSkydrivePhotoClass {
+  ZpjSkydriveFileClass parent_class;
+};
+</pre>
+<p>
+Class structure for <a class="link" href="ZpjSkydrivePhoto.html" title="ZpjSkydrivePhoto"><span class="type">ZpjSkydrivePhoto</span></a>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><a class="link" href="ZpjSkydriveFile.html#ZpjSkydriveFileClass" title="struct ZpjSkydriveFileClass"><span class="type">ZpjSkydriveFileClass</span></a> <em class="structfield"><code><a name="ZpjSkydrivePhotoClass.parent-class"></a>parent_class</code></em>;</span></p></td>
+<td>The parent class.</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zpj-skydrive-photo-new"></a><h3>zpj_skydrive_photo_new ()</h3>
+<pre class="programlisting"><a class="link" href="ZpjSkydriveEntry.html" title="ZpjSkydriveEntry"><span class="returnvalue">ZpjSkydriveEntry</span></a> *  zpj_skydrive_photo_new              (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/json-glib/json-glib-JSON-Node.html#JsonNode"><span class="type">JsonNode</span></a> *node</code></em>);</pre>
+<p>
+Creates a new <a class="link" href="ZpjSkydrivePhoto.html" title="ZpjSkydrivePhoto"><span class="type">ZpjSkydrivePhoto</span></a> from the given <em class="parameter"><code>node</code></em>. If you already
+know the ID of the photo then you can use
+<a class="link" href="ZpjSkydrive.html#zpj-skydrive-query-info-from-id" title="zpj_skydrive_query_info_from_id ()"><code class="function">zpj_skydrive_query_info_from_id()</code></a>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>node</code></em> :</span></p></td>
+<td>A <a href="/usr/share/gtk-doc/html/json-glib/json-glib-JSON-Node.html#JsonNode"><span class="type">JsonNode</span></a> returned by the server.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A new <a class="link" href="ZpjSkydrivePhoto.html" title="ZpjSkydrivePhoto"><span class="type">ZpjSkydrivePhoto</span></a>. Free the returned
+object with <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>. <span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

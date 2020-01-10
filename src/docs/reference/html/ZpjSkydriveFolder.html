@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>ZpjSkydriveFolder</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.77.1">
+<link rel="home" href="index.html" title="Zapojit Reference Manual">
+<link rel="up" href="skydrive.html" title="Skydrive API">
+<link rel="prev" href="ZpjSkydriveFile.html" title="ZpjSkydriveFile">
+<link rel="next" href="ZpjSkydrivePhoto.html" title="ZpjSkydrivePhoto">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="ZpjSkydriveFile.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="skydrive.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Zapojit Reference Manual</th>
+<td><a accesskey="n" href="ZpjSkydrivePhoto.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#ZpjSkydriveFolder.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#ZpjSkydriveFolder.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#ZpjSkydriveFolder.object-hierarchy" class="shortcut">Object Hierarchy</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="ZpjSkydriveFolder"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="ZpjSkydriveFolder.top_of_page"></a>ZpjSkydriveFolder</span></h2>
+<p>ZpjSkydriveFolder — Skydrive folder object.</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="ZpjSkydriveFolder.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">
+#include &lt;zpj/zpj.h&gt;
+
+#define             <a class="link" href="ZpjSkydriveFolder.html#ZPJ-SKYDRIVE-FOLDER-MY-DOCUMENTS:CAPS" title="ZPJ_SKYDRIVE_FOLDER_MY_DOCUMENTS">ZPJ_SKYDRIVE_FOLDER_MY_DOCUMENTS</a>
+#define             <a class="link" href="ZpjSkydriveFolder.html#ZPJ-SKYDRIVE-FOLDER-MY-PHOTOS:CAPS" title="ZPJ_SKYDRIVE_FOLDER_MY_PHOTOS">ZPJ_SKYDRIVE_FOLDER_MY_PHOTOS</a>
+#define             <a class="link" href="ZpjSkydriveFolder.html#ZPJ-SKYDRIVE-FOLDER-PUBLIC-DOCUMENTS:CAPS" title="ZPJ_SKYDRIVE_FOLDER_PUBLIC_DOCUMENTS">ZPJ_SKYDRIVE_FOLDER_PUBLIC_DOCUMENTS</a>
+#define             <a class="link" href="ZpjSkydriveFolder.html#ZPJ-SKYDRIVE-FOLDER-SKYDRIVE:CAPS" title="ZPJ_SKYDRIVE_FOLDER_SKYDRIVE">ZPJ_SKYDRIVE_FOLDER_SKYDRIVE</a>
+struct              <a class="link" href="ZpjSkydriveFolder.html#ZpjSkydriveFolder-struct" title="struct ZpjSkydriveFolder">ZpjSkydriveFolder</a>;
+struct              <a class="link" href="ZpjSkydriveFolder.html#ZpjSkydriveFolderClass" title="struct ZpjSkydriveFolderClass">ZpjSkydriveFolderClass</a>;
+<a class="link" href="ZpjSkydriveEntry.html" title="ZpjSkydriveEntry"><span class="returnvalue">ZpjSkydriveEntry</span></a> *  <a class="link" href="ZpjSkydriveFolder.html#zpj-skydrive-folder-new" title="zpj_skydrive_folder_new ()">zpj_skydrive_folder_new</a>             (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/json-glib/json-glib-JSON-Node.html#JsonNode"><span class="type">JsonNode</span></a> *node</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="ZpjSkydriveFolder.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a class="link" href="ZpjSkydriveEntry.html" title="ZpjSkydriveEntry">ZpjSkydriveEntry</a>
+         +----ZpjSkydriveFolder
+</pre>
+</div>
+<div class="refsect1">
+<a name="ZpjSkydriveFolder.description"></a><h2>Description</h2>
+<p>
+<a class="link" href="ZpjSkydriveFolder.html" title="ZpjSkydriveFolder"><span class="type">ZpjSkydriveFolder</span></a> represents a <a class="ulink" href="http://msdn.microsoft.com/en-us/library/live/hh243648#folder" target="_top">
+Skydrive folder</a> object.
+</p>
+</div>
+<div class="refsect1">
+<a name="ZpjSkydriveFolder.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="ZPJ-SKYDRIVE-FOLDER-MY-DOCUMENTS:CAPS"></a><h3>ZPJ_SKYDRIVE_FOLDER_MY_DOCUMENTS</h3>
+<pre class="programlisting">#define ZPJ_SKYDRIVE_FOLDER_MY_DOCUMENTS "me/skydrive/my_documents"
+</pre>
+<p>
+<a class="ulink" href="http://msdn.microsoft.com/en-us/library/live/hh826545#friendly" target="_top">
+Friendly name</a> for the Documents folder. It can be used as
+the <a class="link" href="ZpjSkydriveEntry.html#ZpjSkydriveEntry--id" title='The "id" property'><span class="type">"id"</span></a> and <a class="link" href="ZpjSkydriveEntry.html#ZpjSkydriveEntry--parent-id" title='The "parent-id" property'><span class="type">"parent_id"</span></a>.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ZPJ-SKYDRIVE-FOLDER-MY-PHOTOS:CAPS"></a><h3>ZPJ_SKYDRIVE_FOLDER_MY_PHOTOS</h3>
+<pre class="programlisting">#define ZPJ_SKYDRIVE_FOLDER_MY_PHOTOS "me/skydrive/my_photos"
+</pre>
+<p>
+<a class="ulink" href="http://msdn.microsoft.com/en-us/library/live/hh826545#friendly" target="_top">
+Friendly name</a> for the Pictures folder. It can be used as the
+<a class="link" href="ZpjSkydriveEntry.html#ZpjSkydriveEntry--id" title='The "id" property'><span class="type">"id"</span></a> and <a class="link" href="ZpjSkydriveEntry.html#ZpjSkydriveEntry--parent-id" title='The "parent-id" property'><span class="type">"parent_id"</span></a>.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ZPJ-SKYDRIVE-FOLDER-PUBLIC-DOCUMENTS:CAPS"></a><h3>ZPJ_SKYDRIVE_FOLDER_PUBLIC_DOCUMENTS</h3>
+<pre class="programlisting">#define ZPJ_SKYDRIVE_FOLDER_PUBLIC_DOCUMENTS "me/skydrive/public_documents"
+</pre>
+<p>
+<a class="ulink" href="http://msdn.microsoft.com/en-us/library/live/hh826545#friendly" target="_top">
+Friendly name</a> for the Public folder. It can be used as the
+<a class="link" href="ZpjSkydriveEntry.html#ZpjSkydriveEntry--id" title='The "id" property'><span class="type">"id"</span></a> and <a class="link" href="ZpjSkydriveEntry.html#ZpjSkydriveEntry--parent-id" title='The "parent-id" property'><span class="type">"parent_id"</span></a>.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ZPJ-SKYDRIVE-FOLDER-SKYDRIVE:CAPS"></a><h3>ZPJ_SKYDRIVE_FOLDER_SKYDRIVE</h3>
+<pre class="programlisting">#define ZPJ_SKYDRIVE_FOLDER_SKYDRIVE "me/skydrive"
+</pre>
+<p>
+<a class="ulink" href="http://msdn.microsoft.com/en-us/library/live/hh826545#friendly" target="_top">
+Friendly name</a> for the Skydrive top-level folder. It can be
+used as the <a class="link" href="ZpjSkydriveEntry.html#ZpjSkydriveEntry--id" title='The "id" property'><span class="type">"id"</span></a> and <a class="link" href="ZpjSkydriveEntry.html#ZpjSkydriveEntry--parent-id" title='The "parent-id" property'><span class="type">"parent_id"</span></a>.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ZpjSkydriveFolder-struct"></a><h3>struct ZpjSkydriveFolder</h3>
+<pre class="programlisting">struct ZpjSkydriveFolder;</pre>
+<p>
+The <a class="link" href="ZpjSkydriveFolder.html" title="ZpjSkydriveFolder"><span class="type">ZpjSkydriveFolder</span></a> structure contains only private data and
+should only be accessed using the provided API.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ZpjSkydriveFolderClass"></a><h3>struct ZpjSkydriveFolderClass</h3>
+<pre class="programlisting">struct ZpjSkydriveFolderClass {
+  ZpjSkydriveEntryClass parent_class;
+};
+</pre>
+<p>
+Class structure for <a class="link" href="ZpjSkydriveFolder.html" title="ZpjSkydriveFolder"><span class="type">ZpjSkydriveFolder</span></a>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><a class="link" href="ZpjSkydriveEntry.html#ZpjSkydriveEntryClass" title="struct ZpjSkydriveEntryClass"><span class="type">ZpjSkydriveEntryClass</span></a> <em class="structfield"><code><a name="ZpjSkydriveFolderClass.parent-class"></a>parent_class</code></em>;</span></p></td>
+<td>The parent class.</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zpj-skydrive-folder-new"></a><h3>zpj_skydrive_folder_new ()</h3>
+<pre class="programlisting"><a class="link" href="ZpjSkydriveEntry.html" title="ZpjSkydriveEntry"><span class="returnvalue">ZpjSkydriveEntry</span></a> *  zpj_skydrive_folder_new             (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/json-glib/json-glib-JSON-Node.html#JsonNode"><span class="type">JsonNode</span></a> *node</code></em>);</pre>
+<p>
+Creates a new <a class="link" href="ZpjSkydriveFolder.html" title="ZpjSkydriveFolder"><span class="type">ZpjSkydriveFolder</span></a> from the given <em class="parameter"><code>node</code></em>. If you
+already know the ID of the folder then you can use
+<a class="link" href="ZpjSkydrive.html#zpj-skydrive-query-info-from-id" title="zpj_skydrive_query_info_from_id ()"><code class="function">zpj_skydrive_query_info_from_id()</code></a>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>node</code></em> :</span></p></td>
+<td>A <a href="/usr/share/gtk-doc/html/json-glib/json-glib-JSON-Node.html#JsonNode"><span class="type">JsonNode</span></a> returned by the server.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A new <a class="link" href="ZpjSkydriveFolder.html" title="ZpjSkydriveFolder"><span class="type">ZpjSkydriveFolder</span></a>. Free the
+returned object with <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>. <span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

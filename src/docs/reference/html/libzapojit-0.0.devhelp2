@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE book PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "">
+<book xmlns="http://www.devhelp.net/book" title="Zapojit Reference Manual" link="index.html" author="Debarshi Ray" name="libzapojit-0.0" version="2" language="c">
+  <chapters>
+    <sub name="Authorization API" link="authorization.html">
+      <sub name="ZpjAuthorizer" link="libzapojit-0.0-ZpjAuthorizer.html"/>
+      <sub name="ZpjGoaAuthorizer" link="ZpjGoaAuthorizer.html"/>
+    </sub>
+    <sub name="Skydrive API" link="skydrive.html">
+      <sub name="ZpjSkydrive" link="ZpjSkydrive.html"/>
+      <sub name="ZpjSkydriveEntry" link="ZpjSkydriveEntry.html"/>
+      <sub name="ZpjSkydriveFile" link="ZpjSkydriveFile.html"/>
+      <sub name="ZpjSkydriveFolder" link="ZpjSkydriveFolder.html"/>
+      <sub name="ZpjSkydrivePhoto" link="ZpjSkydrivePhoto.html"/>
+    </sub>
+    <sub name="Index" link="ix01.html"/>
+    <sub name="Annotation Glossary" link="annotation-glossary.html"/>
+  </chapters>
+  <functions>
+    <keyword type="struct" name="struct ZpjAuthorizerInterface" link="libzapojit-0.0-ZpjAuthorizer.html#ZpjAuthorizerInterface"/>
+    <keyword type="function" name="zpj_authorizer_is_authorized_for_domain ()" link="libzapojit-0.0-ZpjAuthorizer.html#zpj-authorizer-is-authorized-for-domain"/>
+    <keyword type="function" name="zpj_authorizer_process_call ()" link="libzapojit-0.0-ZpjAuthorizer.html#zpj-authorizer-process-call"/>
+    <keyword type="function" name="zpj_authorizer_process_message ()" link="libzapojit-0.0-ZpjAuthorizer.html#zpj-authorizer-process-message"/>
+    <keyword type="function" name="zpj_authorizer_refresh_authorization ()" link="libzapojit-0.0-ZpjAuthorizer.html#zpj-authorizer-refresh-authorization"/>
+    <keyword type="function" name="zpj_authorizer_refresh_authorization_async ()" link="libzapojit-0.0-ZpjAuthorizer.html#zpj-authorizer-refresh-authorization-async"/>
+    <keyword type="function" name="zpj_authorizer_refresh_authorization_finish ()" link="libzapojit-0.0-ZpjAuthorizer.html#zpj-authorizer-refresh-authorization-finish"/>
+    <keyword type="struct" name="struct ZpjGoaAuthorizer" link="ZpjGoaAuthorizer.html#ZpjGoaAuthorizer-struct"/>
+    <keyword type="struct" name="struct ZpjGoaAuthorizerClass" link="ZpjGoaAuthorizer.html#ZpjGoaAuthorizerClass"/>
+    <keyword type="function" name="zpj_goa_authorizer_get_goa_object ()" link="ZpjGoaAuthorizer.html#zpj-goa-authorizer-get-goa-object"/>
+    <keyword type="function" name="zpj_goa_authorizer_new ()" link="ZpjGoaAuthorizer.html#zpj-goa-authorizer-new"/>
+    <keyword type="property" name="The &quot;goa-object&quot; property" link="ZpjGoaAuthorizer.html#ZpjGoaAuthorizer--goa-object"/>
+    <keyword type="struct" name="struct ZpjSkydrive" link="ZpjSkydrive.html#ZpjSkydrive-struct"/>
+    <keyword type="struct" name="struct ZpjSkydriveClass" link="ZpjSkydrive.html#ZpjSkydriveClass"/>
+    <keyword type="function" name="zpj_skydrive_create_folder ()" link="ZpjSkydrive.html#zpj-skydrive-create-folder"/>
+    <keyword type="function" name="zpj_skydrive_create_folder_from_name ()" link="ZpjSkydrive.html#zpj-skydrive-create-folder-from-name"/>
+    <keyword type="function" name="zpj_skydrive_delete_entry_id ()" link="ZpjSkydrive.html#zpj-skydrive-delete-entry-id"/>
+    <keyword type="function" name="zpj_skydrive_download_file_id_to_path ()" link="ZpjSkydrive.html#zpj-skydrive-download-file-id-to-path"/>
+    <keyword type="function" name="zpj_skydrive_download_file_id_to_stream ()" link="ZpjSkydrive.html#zpj-skydrive-download-file-id-to-stream"/>
+    <keyword type="function" name="zpj_skydrive_download_file_id_to_stream_async ()" link="ZpjSkydrive.html#zpj-skydrive-download-file-id-to-stream-async"/>
+    <keyword type="function" name="zpj_skydrive_download_file_id_to_stream_finish ()" link="ZpjSkydrive.html#zpj-skydrive-download-file-id-to-stream-finish"/>
+    <keyword type="function" name="zpj_skydrive_download_file_to_path ()" link="ZpjSkydrive.html#zpj-skydrive-download-file-to-path"/>
+    <keyword type="function" name="zpj_skydrive_download_file_to_stream ()" link="ZpjSkydrive.html#zpj-skydrive-download-file-to-stream"/>
+    <keyword type="function" name="zpj_skydrive_download_file_to_stream_async ()" link="ZpjSkydrive.html#zpj-skydrive-download-file-to-stream-async"/>
+    <keyword type="function" name="zpj_skydrive_download_file_to_stream_finish ()" link="ZpjSkydrive.html#zpj-skydrive-download-file-to-stream-finish"/>
+    <keyword type="function" name="zpj_skydrive_get_authorizer ()" link="ZpjSkydrive.html#zpj-skydrive-get-authorizer"/>
+    <keyword type="function" name="zpj_skydrive_list_folder ()" link="ZpjSkydrive.html#zpj-skydrive-list-folder"/>
+    <keyword type="function" name="zpj_skydrive_list_folder_id ()" link="ZpjSkydrive.html#zpj-skydrive-list-folder-id"/>
+    <keyword type="function" name="zpj_skydrive_list_folder_id_async ()" link="ZpjSkydrive.html#zpj-skydrive-list-folder-id-async"/>
+    <keyword type="function" name="zpj_skydrive_list_folder_id_finish ()" link="ZpjSkydrive.html#zpj-skydrive-list-folder-id-finish"/>
+    <keyword type="function" name="zpj_skydrive_new ()" link="ZpjSkydrive.html#zpj-skydrive-new"/>
+    <keyword type="function" name="zpj_skydrive_query_info_from_id ()" link="ZpjSkydrive.html#zpj-skydrive-query-info-from-id"/>
+    <keyword type="function" name="zpj_skydrive_query_info_from_id_async ()" link="ZpjSkydrive.html#zpj-skydrive-query-info-from-id-async"/>
+    <keyword type="function" name="zpj_skydrive_query_info_from_id_finish ()" link="ZpjSkydrive.html#zpj-skydrive-query-info-from-id-finish"/>
+    <keyword type="function" name="zpj_skydrive_set_authorizer ()" link="ZpjSkydrive.html#zpj-skydrive-set-authorizer"/>
+    <keyword type="function" name="zpj_skydrive_upload_path_to_folder ()" link="ZpjSkydrive.html#zpj-skydrive-upload-path-to-folder"/>
+    <keyword type="function" name="zpj_skydrive_upload_path_to_folder_id ()" link="ZpjSkydrive.html#zpj-skydrive-upload-path-to-folder-id"/>
+    <keyword type="property" name="The &quot;authorizer&quot; property" link="ZpjSkydrive.html#ZpjSkydrive--authorizer"/>
+    <keyword type="struct" name="struct ZpjSkydriveEntry" link="ZpjSkydriveEntry.html#ZpjSkydriveEntry-struct"/>
+    <keyword type="struct" name="struct ZpjSkydriveEntryClass" link="ZpjSkydriveEntry.html#ZpjSkydriveEntryClass"/>
+    <keyword type="enum" name="enum ZpjSkydriveEntryType" link="ZpjSkydriveEntry.html#ZpjSkydriveEntryType"/>
+    <keyword type="function" name="zpj_skydrive_entry_get_created_time ()" link="ZpjSkydriveEntry.html#zpj-skydrive-entry-get-created-time"/>
+    <keyword type="function" name="zpj_skydrive_entry_get_description ()" link="ZpjSkydriveEntry.html#zpj-skydrive-entry-get-description"/>
+    <keyword type="function" name="zpj_skydrive_entry_get_from_id ()" link="ZpjSkydriveEntry.html#zpj-skydrive-entry-get-from-id"/>
+    <keyword type="function" name="zpj_skydrive_entry_get_from_name ()" link="ZpjSkydriveEntry.html#zpj-skydrive-entry-get-from-name"/>
+    <keyword type="function" name="zpj_skydrive_entry_get_id ()" link="ZpjSkydriveEntry.html#zpj-skydrive-entry-get-id"/>
+    <keyword type="function" name="zpj_skydrive_entry_get_name ()" link="ZpjSkydriveEntry.html#zpj-skydrive-entry-get-name"/>
+    <keyword type="function" name="zpj_skydrive_entry_get_parent_id ()" link="ZpjSkydriveEntry.html#zpj-skydrive-entry-get-parent-id"/>
+    <keyword type="function" name="zpj_skydrive_entry_get_updated_time ()" link="ZpjSkydriveEntry.html#zpj-skydrive-entry-get-updated-time"/>
+    <keyword type="function" name="zpj_skydrive_entry_is_folder ()" link="ZpjSkydriveEntry.html#zpj-skydrive-entry-is-folder"/>
+    <keyword type="property" name="The &quot;created-time&quot; property" link="ZpjSkydriveEntry.html#ZpjSkydriveEntry--created-time"/>
+    <keyword type="property" name="The &quot;description&quot; property" link="ZpjSkydriveEntry.html#ZpjSkydriveEntry--description"/>
+    <keyword type="property" name="The &quot;from-id&quot; property" link="ZpjSkydriveEntry.html#ZpjSkydriveEntry--from-id"/>
+    <keyword type="property" name="The &quot;from-name&quot; property" link="ZpjSkydriveEntry.html#ZpjSkydriveEntry--from-name"/>
+    <keyword type="property" name="The &quot;id&quot; property" link="ZpjSkydriveEntry.html#ZpjSkydriveEntry--id"/>
+    <keyword type="property" name="The &quot;json&quot; property" link="ZpjSkydriveEntry.html#ZpjSkydriveEntry--json"/>
+    <keyword type="property" name="The &quot;name&quot; property" link="ZpjSkydriveEntry.html#ZpjSkydriveEntry--name"/>
+    <keyword type="property" name="The &quot;parent-id&quot; property" link="ZpjSkydriveEntry.html#ZpjSkydriveEntry--parent-id"/>
+    <keyword type="property" name="The &quot;type&quot; property" link="ZpjSkydriveEntry.html#ZpjSkydriveEntry--type"/>
+    <keyword type="property" name="The &quot;updated-time&quot; property" link="ZpjSkydriveEntry.html#ZpjSkydriveEntry--updated-time"/>
+    <keyword type="struct" name="struct ZpjSkydriveFile" link="ZpjSkydriveFile.html#ZpjSkydriveFile-struct"/>
+    <keyword type="struct" name="struct ZpjSkydriveFileClass" link="ZpjSkydriveFile.html#ZpjSkydriveFileClass"/>
+    <keyword type="function" name="zpj_skydrive_file_get_size ()" link="ZpjSkydriveFile.html#zpj-skydrive-file-get-size"/>
+    <keyword type="function" name="zpj_skydrive_file_new ()" link="ZpjSkydriveFile.html#zpj-skydrive-file-new"/>
+    <keyword type="property" name="The &quot;size&quot; property" link="ZpjSkydriveFile.html#ZpjSkydriveFile--size"/>
+    <keyword type="macro" name="ZPJ_SKYDRIVE_FOLDER_MY_DOCUMENTS" link="ZpjSkydriveFolder.html#ZPJ-SKYDRIVE-FOLDER-MY-DOCUMENTS:CAPS"/>
+    <keyword type="macro" name="ZPJ_SKYDRIVE_FOLDER_MY_PHOTOS" link="ZpjSkydriveFolder.html#ZPJ-SKYDRIVE-FOLDER-MY-PHOTOS:CAPS"/>
+    <keyword type="macro" name="ZPJ_SKYDRIVE_FOLDER_PUBLIC_DOCUMENTS" link="ZpjSkydriveFolder.html#ZPJ-SKYDRIVE-FOLDER-PUBLIC-DOCUMENTS:CAPS"/>
+    <keyword type="macro" name="ZPJ_SKYDRIVE_FOLDER_SKYDRIVE" link="ZpjSkydriveFolder.html#ZPJ-SKYDRIVE-FOLDER-SKYDRIVE:CAPS"/>
+    <keyword type="struct" name="struct ZpjSkydriveFolder" link="ZpjSkydriveFolder.html#ZpjSkydriveFolder-struct"/>
+    <keyword type="struct" name="struct ZpjSkydriveFolderClass" link="ZpjSkydriveFolder.html#ZpjSkydriveFolderClass"/>
+    <keyword type="function" name="zpj_skydrive_folder_new ()" link="ZpjSkydriveFolder.html#zpj-skydrive-folder-new"/>
+    <keyword type="struct" name="struct ZpjSkydrivePhoto" link="ZpjSkydrivePhoto.html#ZpjSkydrivePhoto-struct"/>
+    <keyword type="struct" name="struct ZpjSkydrivePhotoClass" link="ZpjSkydrivePhoto.html#ZpjSkydrivePhotoClass"/>
+    <keyword type="function" name="zpj_skydrive_photo_new ()" link="ZpjSkydrivePhoto.html#zpj-skydrive-photo-new"/>
+    <keyword type="constant" name="ZPJ_SKYDRIVE_ENTRY_TYPE_FILE" link="ZpjSkydriveEntry.html#ZPJ-SKYDRIVE-ENTRY-TYPE-FILE:CAPS"/>
+    <keyword type="constant" name="ZPJ_SKYDRIVE_ENTRY_TYPE_FOLDER" link="ZpjSkydriveEntry.html#ZPJ-SKYDRIVE-ENTRY-TYPE-FOLDER:CAPS"/>
+    <keyword type="constant" name="ZPJ_SKYDRIVE_ENTRY_TYPE_PHOTO" link="ZpjSkydriveEntry.html#ZPJ-SKYDRIVE-ENTRY-TYPE-PHOTO:CAPS"/>
+    <keyword type="constant" name="ZPJ_SKYDRIVE_ENTRY_TYPE_INVALID" link="ZpjSkydriveEntry.html#ZPJ-SKYDRIVE-ENTRY-TYPE-INVALID:CAPS"/>
+  </functions>
+</book>

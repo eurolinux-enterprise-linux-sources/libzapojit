@@ -1,0 +1,514 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>ZpjSkydriveEntry</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.77.1">
+<link rel="home" href="index.html" title="Zapojit Reference Manual">
+<link rel="up" href="skydrive.html" title="Skydrive API">
+<link rel="prev" href="ZpjSkydrive.html" title="ZpjSkydrive">
+<link rel="next" href="ZpjSkydriveFile.html" title="ZpjSkydriveFile">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="ZpjSkydrive.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="skydrive.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">Zapojit Reference Manual</th>
+<td><a accesskey="n" href="ZpjSkydriveFile.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#ZpjSkydriveEntry.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#ZpjSkydriveEntry.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#ZpjSkydriveEntry.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#ZpjSkydriveEntry.properties" class="shortcut">Properties</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="ZpjSkydriveEntry"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="ZpjSkydriveEntry.top_of_page"></a>ZpjSkydriveEntry</span></h2>
+<p>ZpjSkydriveEntry — Abstract base class for file, folder and photo
+  objects.</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="ZpjSkydriveEntry.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">
+#include &lt;zpj/zpj.h&gt;
+
+struct              <a class="link" href="ZpjSkydriveEntry.html#ZpjSkydriveEntry-struct" title="struct ZpjSkydriveEntry">ZpjSkydriveEntry</a>;
+struct              <a class="link" href="ZpjSkydriveEntry.html#ZpjSkydriveEntryClass" title="struct ZpjSkydriveEntryClass">ZpjSkydriveEntryClass</a>;
+enum                <a class="link" href="ZpjSkydriveEntry.html#ZpjSkydriveEntryType" title="enum ZpjSkydriveEntryType">ZpjSkydriveEntryType</a>;
+<a href="http://library.gnome.org/devel/glib/unstable/glib-GDateTime.html#GDateTime"><span class="returnvalue">GDateTime</span></a> *         <a class="link" href="ZpjSkydriveEntry.html#zpj-skydrive-entry-get-created-time" title="zpj_skydrive_entry_get_created_time ()">zpj_skydrive_entry_get_created_time</a> (<em class="parameter"><code><a class="link" href="ZpjSkydriveEntry.html" title="ZpjSkydriveEntry"><span class="type">ZpjSkydriveEntry</span></a> *self</code></em>);
+const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       <a class="link" href="ZpjSkydriveEntry.html#zpj-skydrive-entry-get-description" title="zpj_skydrive_entry_get_description ()">zpj_skydrive_entry_get_description</a>  (<em class="parameter"><code><a class="link" href="ZpjSkydriveEntry.html" title="ZpjSkydriveEntry"><span class="type">ZpjSkydriveEntry</span></a> *self</code></em>);
+const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       <a class="link" href="ZpjSkydriveEntry.html#zpj-skydrive-entry-get-from-id" title="zpj_skydrive_entry_get_from_id ()">zpj_skydrive_entry_get_from_id</a>      (<em class="parameter"><code><a class="link" href="ZpjSkydriveEntry.html" title="ZpjSkydriveEntry"><span class="type">ZpjSkydriveEntry</span></a> *self</code></em>);
+const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       <a class="link" href="ZpjSkydriveEntry.html#zpj-skydrive-entry-get-from-name" title="zpj_skydrive_entry_get_from_name ()">zpj_skydrive_entry_get_from_name</a>    (<em class="parameter"><code><a class="link" href="ZpjSkydriveEntry.html" title="ZpjSkydriveEntry"><span class="type">ZpjSkydriveEntry</span></a> *self</code></em>);
+const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       <a class="link" href="ZpjSkydriveEntry.html#zpj-skydrive-entry-get-id" title="zpj_skydrive_entry_get_id ()">zpj_skydrive_entry_get_id</a>           (<em class="parameter"><code><a class="link" href="ZpjSkydriveEntry.html" title="ZpjSkydriveEntry"><span class="type">ZpjSkydriveEntry</span></a> *self</code></em>);
+const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       <a class="link" href="ZpjSkydriveEntry.html#zpj-skydrive-entry-get-name" title="zpj_skydrive_entry_get_name ()">zpj_skydrive_entry_get_name</a>         (<em class="parameter"><code><a class="link" href="ZpjSkydriveEntry.html" title="ZpjSkydriveEntry"><span class="type">ZpjSkydriveEntry</span></a> *self</code></em>);
+const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       <a class="link" href="ZpjSkydriveEntry.html#zpj-skydrive-entry-get-parent-id" title="zpj_skydrive_entry_get_parent_id ()">zpj_skydrive_entry_get_parent_id</a>    (<em class="parameter"><code><a class="link" href="ZpjSkydriveEntry.html" title="ZpjSkydriveEntry"><span class="type">ZpjSkydriveEntry</span></a> *self</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-GDateTime.html#GDateTime"><span class="returnvalue">GDateTime</span></a> *         <a class="link" href="ZpjSkydriveEntry.html#zpj-skydrive-entry-get-updated-time" title="zpj_skydrive_entry_get_updated_time ()">zpj_skydrive_entry_get_updated_time</a> (<em class="parameter"><code><a class="link" href="ZpjSkydriveEntry.html" title="ZpjSkydriveEntry"><span class="type">ZpjSkydriveEntry</span></a> *self</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="ZpjSkydriveEntry.html#zpj-skydrive-entry-is-folder" title="zpj_skydrive_entry_is_folder ()">zpj_skydrive_entry_is_folder</a>        (<em class="parameter"><code><a class="link" href="ZpjSkydriveEntry.html" title="ZpjSkydriveEntry"><span class="type">ZpjSkydriveEntry</span></a> *self</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="ZpjSkydriveEntry.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----ZpjSkydriveEntry
+         +----<a class="link" href="ZpjSkydriveFile.html" title="ZpjSkydriveFile">ZpjSkydriveFile</a>
+         +----<a class="link" href="ZpjSkydriveFolder.html" title="ZpjSkydriveFolder">ZpjSkydriveFolder</a>
+</pre>
+</div>
+<div class="refsect1">
+<a name="ZpjSkydriveEntry.properties"></a><h2>Properties</h2>
+<pre class="synopsis">
+  "<a class="link" href="ZpjSkydriveEntry.html#ZpjSkydriveEntry--created-time" title='The "created-time" property'>created-time</a>"             <a href="http://library.gnome.org/devel/glib/unstable/glib-GDateTime.html#GDateTime"><span class="type">GDateTime</span></a>*            : Read
+  "<a class="link" href="ZpjSkydriveEntry.html#ZpjSkydriveEntry--description" title='The "description" property'>description</a>"              <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read
+  "<a class="link" href="ZpjSkydriveEntry.html#ZpjSkydriveEntry--from-id" title='The "from-id" property'>from-id</a>"                  <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read
+  "<a class="link" href="ZpjSkydriveEntry.html#ZpjSkydriveEntry--from-name" title='The "from-name" property'>from-name</a>"                <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read
+  "<a class="link" href="ZpjSkydriveEntry.html#ZpjSkydriveEntry--id" title='The "id" property'>id</a>"                       <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read
+  "<a class="link" href="ZpjSkydriveEntry.html#ZpjSkydriveEntry--json" title='The "json" property'>json</a>"                     <a href="/usr/share/gtk-doc/html/json-glib/json-glib-JSON-Node.html#JsonNode"><span class="type">JsonNode</span></a>*             : Write / Construct Only
+  "<a class="link" href="ZpjSkydriveEntry.html#ZpjSkydriveEntry--name" title='The "name" property'>name</a>"                     <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read
+  "<a class="link" href="ZpjSkydriveEntry.html#ZpjSkydriveEntry--parent-id" title='The "parent-id" property'>parent-id</a>"                <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read
+  "<a class="link" href="ZpjSkydriveEntry.html#ZpjSkydriveEntry--type" title='The "type" property'>type</a>"                     <a class="link" href="ZpjSkydriveEntry.html#ZpjSkydriveEntryType" title="enum ZpjSkydriveEntryType"><span class="type">ZpjSkydriveEntryType</span></a>  : Read
+  "<a class="link" href="ZpjSkydriveEntry.html#ZpjSkydriveEntry--updated-time" title='The "updated-time" property'>updated-time</a>"             <a href="http://library.gnome.org/devel/glib/unstable/glib-GDateTime.html#GDateTime"><span class="type">GDateTime</span></a>*            : Read
+</pre>
+</div>
+<div class="refsect1">
+<a name="ZpjSkydriveEntry.description"></a><h2>Description</h2>
+<p>
+<a class="link" href="ZpjSkydriveEntry.html" title="ZpjSkydriveEntry"><span class="type">ZpjSkydriveEntry</span></a> is an abstract base class for Skydrive file,
+folder and photo
+<a class="ulink" href="http://msdn.microsoft.com/en-us/library/live/hh243648" target="_top">
+objects</a>.
+</p>
+<p>
+Subclasses may implement
+<a class="link" href="ZpjSkydriveEntry.html#ZpjSkydriveEntryClass.parse-json-node"><span class="type">ZpjSkydriveEntryClass.parse_json_node</span></a> (should chain up to its
+parent class) to parse data specific to them in the JSON returned
+by the server.
+</p>
+</div>
+<div class="refsect1">
+<a name="ZpjSkydriveEntry.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="ZpjSkydriveEntry-struct"></a><h3>struct ZpjSkydriveEntry</h3>
+<pre class="programlisting">struct ZpjSkydriveEntry;</pre>
+<p>
+The <a class="link" href="ZpjSkydriveEntry.html" title="ZpjSkydriveEntry"><span class="type">ZpjSkydriveEntry</span></a> structure contains only private data and
+should only be accessed using the provided API.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ZpjSkydriveEntryClass"></a><h3>struct ZpjSkydriveEntryClass</h3>
+<pre class="programlisting">struct ZpjSkydriveEntryClass {
+  GObjectClass parent_class;
+
+  void    (*parse_json_node)    (ZpjSkydriveEntry *self, JsonNode *node);
+};
+</pre>
+<p>
+Class structure for <a class="link" href="ZpjSkydriveEntry.html" title="ZpjSkydriveEntry"><span class="type">ZpjSkydriveEntry</span></a>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObjectClass"><span class="type">GObjectClass</span></a> <em class="structfield"><code><a name="ZpjSkydriveEntryClass.parent-class"></a>parent_class</code></em>;</span></p></td>
+<td>The parent class.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="ZpjSkydriveEntryClass.parse-json-node"></a>parse_json_node</code></em> ()</span></p></td>
+<td>Virtual function that subclasses may implement
+to parse data specific to them in the JSON returned by the server.
+Implementations must chain up to their parent classes.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ZpjSkydriveEntryType"></a><h3>enum ZpjSkydriveEntryType</h3>
+<pre class="programlisting">typedef enum {
+  ZPJ_SKYDRIVE_ENTRY_TYPE_FILE,
+  ZPJ_SKYDRIVE_ENTRY_TYPE_FOLDER,
+  ZPJ_SKYDRIVE_ENTRY_TYPE_PHOTO,
+  ZPJ_SKYDRIVE_ENTRY_TYPE_INVALID
+} ZpjSkydriveEntryType;
+</pre>
+<p>
+The types of Skydrive
+<a class="ulink" href="http://msdn.microsoft.com/en-us/library/live/hh243648" target="_top">
+objects</a>.
+</p>
+<p>
+This enumeration can be expanded at a later date.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><a name="ZPJ-SKYDRIVE-ENTRY-TYPE-FILE:CAPS"></a><span class="term"><code class="literal">ZPJ_SKYDRIVE_ENTRY_TYPE_FILE</code></span></p></td>
+<td>A file.
+</td>
+</tr>
+<tr>
+<td><p><a name="ZPJ-SKYDRIVE-ENTRY-TYPE-FOLDER:CAPS"></a><span class="term"><code class="literal">ZPJ_SKYDRIVE_ENTRY_TYPE_FOLDER</code></span></p></td>
+<td>A folder.
+</td>
+</tr>
+<tr>
+<td><p><a name="ZPJ-SKYDRIVE-ENTRY-TYPE-PHOTO:CAPS"></a><span class="term"><code class="literal">ZPJ_SKYDRIVE_ENTRY_TYPE_PHOTO</code></span></p></td>
+<td>A photo.
+</td>
+</tr>
+<tr>
+<td><p><a name="ZPJ-SKYDRIVE-ENTRY-TYPE-INVALID:CAPS"></a><span class="term"><code class="literal">ZPJ_SKYDRIVE_ENTRY_TYPE_INVALID</code></span></p></td>
+<td>Invalid or unknown object.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zpj-skydrive-entry-get-created-time"></a><h3>zpj_skydrive_entry_get_created_time ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-GDateTime.html#GDateTime"><span class="returnvalue">GDateTime</span></a> *         zpj_skydrive_entry_get_created_time (<em class="parameter"><code><a class="link" href="ZpjSkydriveEntry.html" title="ZpjSkydriveEntry"><span class="type">ZpjSkydriveEntry</span></a> *self</code></em>);</pre>
+<p>
+Gets the time at which <em class="parameter"><code>self</code></em> was created. This is the value of the
+<a class="ulink" href="http://msdn.microsoft.com/en-us/library/live/hh243648" target="_top">
+updated_time</a> member in the JSON returned by the server.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="ZpjSkydriveEntry.html" title="ZpjSkydriveEntry"><span class="type">ZpjSkydriveEntry</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a <a href="http://library.gnome.org/devel/glib/unstable/glib-GDateTime.html#GDateTime"><span class="type">GDateTime</span></a> representing the time at
+which the entry was created. The returned time is owned by the
+<a class="link" href="ZpjSkydriveEntry.html" title="ZpjSkydriveEntry"><span class="type">ZpjSkydriveEntry</span></a> and should not be unreferenced. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zpj-skydrive-entry-get-description"></a><h3>zpj_skydrive_entry_get_description ()</h3>
+<pre class="programlisting">const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       zpj_skydrive_entry_get_description  (<em class="parameter"><code><a class="link" href="ZpjSkydriveEntry.html" title="ZpjSkydriveEntry"><span class="type">ZpjSkydriveEntry</span></a> *self</code></em>);</pre>
+<p>
+Gets the description of <em class="parameter"><code>self</code></em>. This is the value of the <a class="ulink" href="http://msdn.microsoft.com/en-us/library/live/hh243648" target="_top">
+description</a> member in the JSON returned by the server.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="ZpjSkydriveEntry.html" title="ZpjSkydriveEntry"><span class="type">ZpjSkydriveEntry</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>description of the entry. This string is
+owned by the <a class="link" href="ZpjSkydriveEntry.html" title="ZpjSkydriveEntry"><span class="type">ZpjSkydriveEntry</span></a> and should not be modified or freed. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zpj-skydrive-entry-get-from-id"></a><h3>zpj_skydrive_entry_get_from_id ()</h3>
+<pre class="programlisting">const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       zpj_skydrive_entry_get_from_id      (<em class="parameter"><code><a class="link" href="ZpjSkydriveEntry.html" title="ZpjSkydriveEntry"><span class="type">ZpjSkydriveEntry</span></a> *self</code></em>);</pre>
+<p>
+Gets the ID of the user who created or uploaded <em class="parameter"><code>self</code></em>. This is part
+of the <a class="ulink" href="http://msdn.microsoft.com/en-us/library/live/hh243648" target="_top">
+from</a> object in the JSON returned by the server.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="ZpjSkydriveEntry.html" title="ZpjSkydriveEntry"><span class="type">ZpjSkydriveEntry</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>ID of the user who created the entry.
+This string is by the <a class="link" href="ZpjSkydriveEntry.html" title="ZpjSkydriveEntry"><span class="type">ZpjSkydriveEntry</span></a> and should not be modified
+or freed. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zpj-skydrive-entry-get-from-name"></a><h3>zpj_skydrive_entry_get_from_name ()</h3>
+<pre class="programlisting">const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       zpj_skydrive_entry_get_from_name    (<em class="parameter"><code><a class="link" href="ZpjSkydriveEntry.html" title="ZpjSkydriveEntry"><span class="type">ZpjSkydriveEntry</span></a> *self</code></em>);</pre>
+<p>
+Gets the name of the user who created or uploaded <em class="parameter"><code>self</code></em>. This is
+part of the <a class="ulink" href="http://msdn.microsoft.com/en-us/library/live/hh243648" target="_top">
+from</a> object in the JSON returned by the server.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="ZpjSkydriveEntry.html" title="ZpjSkydriveEntry"><span class="type">ZpjSkydriveEntry</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>name of the user who created the entry.
+This string is by the <a class="link" href="ZpjSkydriveEntry.html" title="ZpjSkydriveEntry"><span class="type">ZpjSkydriveEntry</span></a> and should not be modified
+or freed. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zpj-skydrive-entry-get-id"></a><h3>zpj_skydrive_entry_get_id ()</h3>
+<pre class="programlisting">const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       zpj_skydrive_entry_get_id           (<em class="parameter"><code><a class="link" href="ZpjSkydriveEntry.html" title="ZpjSkydriveEntry"><span class="type">ZpjSkydriveEntry</span></a> *self</code></em>);</pre>
+<p>
+Gets the ID of <em class="parameter"><code>self</code></em>. This is the value of the <a class="ulink" href="http://msdn.microsoft.com/en-us/library/live/hh243648" target="_top">
+id</a> member in the JSON returned by the server.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="ZpjSkydriveEntry.html" title="ZpjSkydriveEntry"><span class="type">ZpjSkydriveEntry</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the entry's ID. This string is
+owned by the <a class="link" href="ZpjSkydriveEntry.html" title="ZpjSkydriveEntry"><span class="type">ZpjSkydriveEntry</span></a> and should not be modified or freed. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zpj-skydrive-entry-get-name"></a><h3>zpj_skydrive_entry_get_name ()</h3>
+<pre class="programlisting">const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       zpj_skydrive_entry_get_name         (<em class="parameter"><code><a class="link" href="ZpjSkydriveEntry.html" title="ZpjSkydriveEntry"><span class="type">ZpjSkydriveEntry</span></a> *self</code></em>);</pre>
+<p>
+Gets the name of <em class="parameter"><code>self</code></em>. This is the value of the <a class="ulink" href="http://msdn.microsoft.com/en-us/library/live/hh243648" target="_top">
+name</a> member in the JSON returned by the server.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="ZpjSkydriveEntry.html" title="ZpjSkydriveEntry"><span class="type">ZpjSkydriveEntry</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>name of the entry. This string is
+owned by the <a class="link" href="ZpjSkydriveEntry.html" title="ZpjSkydriveEntry"><span class="type">ZpjSkydriveEntry</span></a> and should not be modified or freed. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zpj-skydrive-entry-get-parent-id"></a><h3>zpj_skydrive_entry_get_parent_id ()</h3>
+<pre class="programlisting">const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       zpj_skydrive_entry_get_parent_id    (<em class="parameter"><code><a class="link" href="ZpjSkydriveEntry.html" title="ZpjSkydriveEntry"><span class="type">ZpjSkydriveEntry</span></a> *self</code></em>);</pre>
+<p>
+Gets the ID of the folder containing <em class="parameter"><code>self</code></em>. This is the value of
+the <a class="ulink" href="http://msdn.microsoft.com/en-us/library/live/hh243648" target="_top">
+parent_id</a> member in the JSON returned by the server.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="ZpjSkydriveEntry.html" title="ZpjSkydriveEntry"><span class="type">ZpjSkydriveEntry</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>ID of the parent folder. This string is
+owned by the <a class="link" href="ZpjSkydriveEntry.html" title="ZpjSkydriveEntry"><span class="type">ZpjSkydriveEntry</span></a> and should not be modified or freed. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zpj-skydrive-entry-get-updated-time"></a><h3>zpj_skydrive_entry_get_updated_time ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-GDateTime.html#GDateTime"><span class="returnvalue">GDateTime</span></a> *         zpj_skydrive_entry_get_updated_time (<em class="parameter"><code><a class="link" href="ZpjSkydriveEntry.html" title="ZpjSkydriveEntry"><span class="type">ZpjSkydriveEntry</span></a> *self</code></em>);</pre>
+<p>
+Gets the time at which <em class="parameter"><code>self</code></em> was last updated. This is the value of
+the <a class="ulink" href="http://msdn.microsoft.com/en-us/library/live/hh243648" target="_top">
+updated_time</a> member in the JSON returned by the server.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="ZpjSkydriveEntry.html" title="ZpjSkydriveEntry"><span class="type">ZpjSkydriveEntry</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a <a href="http://library.gnome.org/devel/glib/unstable/glib-GDateTime.html#GDateTime"><span class="type">GDateTime</span></a> representing the time at
+which the entry was last updated. The returned time is owned by the
+<a class="link" href="ZpjSkydriveEntry.html" title="ZpjSkydriveEntry"><span class="type">ZpjSkydriveEntry</span></a> and should not be unreferenced. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="zpj-skydrive-entry-is-folder"></a><h3>zpj_skydrive_entry_is_folder ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            zpj_skydrive_entry_is_folder        (<em class="parameter"><code><a class="link" href="ZpjSkydriveEntry.html" title="ZpjSkydriveEntry"><span class="type">ZpjSkydriveEntry</span></a> *self</code></em>);</pre>
+<p>
+Whether <em class="parameter"><code>self</code></em> is a folder.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="ZpjSkydriveEntry.html" title="ZpjSkydriveEntry"><span class="type">ZpjSkydriveEntry</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the entry is a folder.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1">
+<a name="ZpjSkydriveEntry.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="ZpjSkydriveEntry--created-time"></a><h3>The <code class="literal">"created-time"</code> property</h3>
+<pre class="programlisting">  "created-time"             <a href="http://library.gnome.org/devel/glib/unstable/glib-GDateTime.html#GDateTime"><span class="type">GDateTime</span></a>*            : Read</pre>
+<p>The date and time when the entry was created.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ZpjSkydriveEntry--description"></a><h3>The <code class="literal">"description"</code> property</h3>
+<pre class="programlisting">  "description"              <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read</pre>
+<p>A brief description of this entry.</p>
+<p>Default value: NULL</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ZpjSkydriveEntry--from-id"></a><h3>The <code class="literal">"from-id"</code> property</h3>
+<pre class="programlisting">  "from-id"                  <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read</pre>
+<p>The ID of the user created this entry.</p>
+<p>Default value: NULL</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ZpjSkydriveEntry--from-name"></a><h3>The <code class="literal">"from-name"</code> property</h3>
+<pre class="programlisting">  "from-name"                <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read</pre>
+<p>The name of the user created this entry.</p>
+<p>Default value: NULL</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ZpjSkydriveEntry--id"></a><h3>The <code class="literal">"id"</code> property</h3>
+<pre class="programlisting">  "id"                       <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read</pre>
+<p>Unique identifier corresponding to this entry.</p>
+<p>Default value: NULL</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ZpjSkydriveEntry--json"></a><h3>The <code class="literal">"json"</code> property</h3>
+<pre class="programlisting">  "json"                     <a href="/usr/share/gtk-doc/html/json-glib/json-glib-JSON-Node.html#JsonNode"><span class="type">JsonNode</span></a>*             : Write / Construct Only</pre>
+<p>The JSON node representing this entry.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ZpjSkydriveEntry--name"></a><h3>The <code class="literal">"name"</code> property</h3>
+<pre class="programlisting">  "name"                     <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read</pre>
+<p>Human readable name of this entry.</p>
+<p>Default value: NULL</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ZpjSkydriveEntry--parent-id"></a><h3>The <code class="literal">"parent-id"</code> property</h3>
+<pre class="programlisting">  "parent-id"                <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>*                : Read</pre>
+<p>Unique identifier corresponding to the parent entry.</p>
+<p>Default value: NULL</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ZpjSkydriveEntry--type"></a><h3>The <code class="literal">"type"</code> property</h3>
+<pre class="programlisting">  "type"                     <a class="link" href="ZpjSkydriveEntry.html#ZpjSkydriveEntryType" title="enum ZpjSkydriveEntryType"><span class="type">ZpjSkydriveEntryType</span></a>  : Read</pre>
+<p>Indicates whether this entry is a file or a entry.</p>
+<p>Default value: ZPJ_SKYDRIVE_ENTRY_TYPE_INVALID</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ZpjSkydriveEntry--updated-time"></a><h3>The <code class="literal">"updated-time"</code> property</h3>
+<pre class="programlisting">  "updated-time"             <a href="http://library.gnome.org/devel/glib/unstable/glib-GDateTime.html#GDateTime"><span class="type">GDateTime</span></a>*            : Read</pre>
+<p>The date and time when the entry was last updated.</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

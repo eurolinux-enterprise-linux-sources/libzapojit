@@ -1,0 +1,37 @@
+Overview of changes in 0.0.3
+============================
+
+* Bugs fixed:
+ 693353 Be more robust against unknown entry types
+
+
+Overview of changes in 0.0.2
+============================
+
+* Added zpj_skydrive_download_file_to_stream_async and
+  zpj_skydrive_download_file_id_to_stream_async.
+
+
+Overview of changes in 0.0.1
+============================
+
+* Support for SkyDrive file and folder objects. Photos are treated as
+  files.
+
+* Support for the following SkyDrive operations:
+  - Deleting a file, folder or photo.
+  - Listing the contents of a folder.
+  - Reading the properties of a file, folder or photo.
+  - Uploading files and photos.
+
+* GObject Introspection
+
+
+----
+
+Copyright (C) 2012 Red Hat, Inc.
+All rights reserved.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
