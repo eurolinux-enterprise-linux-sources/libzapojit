@@ -2,7 +2,7 @@
 
 Name:           libzapojit
 Version:        0.0.3
-Release:        2%{?dist}
+Release:        4%{?dist}
 Summary:        GLib/GObject wrapper for the SkyDrive and Hotmail REST APIs
 
 License:        LGPLv2+
@@ -96,6 +96,12 @@ rm -rf $RPM_BUILD_ROOT%{_datadir}/doc/%{name}
 
 
 %changelog
+* Fri Jan 24 2014 Daniel Mach <dmach@redhat.com> - 0.0.3-4
+- Mass rebuild 2014-01-24
+
+* Fri Dec 27 2013 Daniel Mach <dmach@redhat.com> - 0.0.3-3
+- Mass rebuild 2013-12-27
+
 * Tue Jul 16 2013 Matthias Clasen <mclasen@redhat.com> - 0.0.3-2
 - Rebuild with newer gtk-doc to fix multilib issues
 
